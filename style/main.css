@@ -1,0 +1,165 @@
+* {
+    margin: 0 auto;
+    padding: 0 auto;
+    box-sizing: border-box;
+    color: #dedede;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: medium;
+}
+
+.container,
+.form__login {
+    background-color: rgb(28, 27, 27);
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+.container,
+.navbar,
+.section__container {
+    display: flex;
+    align-items: center;
+}
+
+li {
+    margin: auto 10px;
+}
+
+.brand {
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.btn {
+    margin: 25% auto;
+    padding: 22%;
+    background-color: cornflowerblue;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+}
+
+.btn:hover,
+.btn__section:hover {
+    background-color: rgb(79, 115, 182);
+    transition: 0.2s;
+}
+
+
+/*  */
+.background__picture {
+    background: linear-gradient(rgba(20, 22, 32, 0.9), rgba(20, 22, 32, 0.9)), url("../img/background-image.jpg") no-repeat center center;
+    background-size: cover;
+}
+
+.small__image {
+    height: 250px;
+}
+
+.title {
+    font-size: 55px;
+    font-weight: 700;
+}
+
+.paragraph {
+    padding: 2% 3%;
+}
+
+.section__container {
+    height: 500px;
+    width: 70%;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.section__wrapper {
+    display: block;
+    width: 45%;
+}
+
+
+/* FORM */
+.line {
+    border-left: 4px solid cornflowerblue;
+}
+
+/* Основное расположение */
+.section__form {
+    display: flex;
+    width: 60%;
+    margin-top: 5%;
+    margin-bottom: 10%;
+    justify-content: center;
+}
+
+.form__signup,
+.form__login {
+    width: 30%;
+}
+
+/* Регистрация */
+.signup {
+    margin-left: 2%;
+}
+
+/* Авторизация */
+.form__login {
+    border-radius: 15px;
+    padding: 2% 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Заголовок */
+.title_signup,
+.title_login {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.title_signup {
+    color: rgb(28, 27, 27);
+}
+
+/* Мелкий текст */
+.small {
+    margin: 3% auto;
+    text-align: center;
+}
+
+.small__signup {
+    margin: 3% auto;
+    color: rgb(28, 27, 27);
+    text-align: left;
+}
+
+/* Ввод */
+.input {
+    padding: 2% 3%;
+    border-radius: 5px;
+    margin-top: 1%;
+    margin-bottom: 3%;
+    background-color: rgb(212, 212, 212);
+}
+
+/* Кнопки */
+.btn__section {
+    background-color: cornflowerblue;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    margin-top: 5%;
+    padding: 2% 5%;
+}
