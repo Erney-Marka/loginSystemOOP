@@ -58,7 +58,7 @@
                     <input type="password" name="pwd" class="input" id="inputPassword" placeholder="Password">
                 </div>
                 <div class="signup">
-                    <input type="password" name="pwd" class="input" id="inputPassword" placeholder="Repeate Password">
+                    <input type="password" name="pwdRepeate" class="input" id="inputPassword" placeholder="Repeate Password">
                 </div>
                 <div class="signup">
                     <input type="text" name="email" class="input" id="inputEmail" placeholder="E-mail">
