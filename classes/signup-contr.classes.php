@@ -15,7 +15,7 @@ class SignupContr extends Signup {
         $this->email = $email;
     }
 
-    private function signupUser() {
+    public function signupUser() {
 
         if ($this->emptyInput() == false) {
             // echo 'Empty Input!';
@@ -47,7 +47,7 @@ class SignupContr extends Signup {
             exit();
         }
 
-        $this->setUser();
+        $this->setUser($this->uid, $this->pwd, $this->email);
     }
 
     private function emptyInput() {

@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,8 +26,15 @@
             </div>
             <div class="wrapper__left">
                 <ul class="navbar">
+
+                    <?php if (isset($_SESSION['userid'])): ?>
+                    <li><a href="#"><?php echo $_SESSION['useruid']; ?></a></li>
+                    <li><a href="includes/logout.inc.php"><button type="submit" class="btn__login">LOGOUT</button></a></li>
+                    <?php else: ?>
                     <li><a href="#">SIGN UP</a></li>
-                    <li><button type="submit" class="btn">LOGIN</button></li>
+                    <li><a href="#"><button type="submit" class="btn__login">LOGIN</button></li>
+                    <?php endif; ?>
+
                 </ul>
             </div>
         </div>
@@ -52,16 +63,16 @@
                     <p class="small__signup">Don't hane an account yet? Sign up here!</p>
                 </div>
                 <div class="signup">
-                    <input type="text" name="uid" class="input" id="inputUsername" placeholder="Username">
+                    <input type="text" name="uid" class="input" placeholder="Username">
                 </div>
                 <div class="signup">
-                    <input type="password" name="pwd" class="input" id="inputPassword" placeholder="Password">
+                    <input type="password" name="pwd" class="input" placeholder="Password">
                 </div>
                 <div class="signup">
-                    <input type="password" name="pwdRepeate" class="input" id="inputPassword" placeholder="Repeate Password">
+                    <input type="password" name="pwdRepeate" class="input" placeholder="Repeate Password">
                 </div>
                 <div class="signup">
-                    <input type="text" name="email" class="input" id="inputEmail" placeholder="E-mail">
+                    <input type="text" name="email" class="input" placeholder="E-mail">
                 </div>
                 <div class="signup"><button type="submit" name="submit" class="btn__section">SIGN UP</button></div>
             </form>
@@ -73,10 +84,10 @@
                     <p class="small">Don't hane an account yet? Sign up here!</p>
                 </div>
                 <div class="login">
-                    <input type="text" name="uid" class="input" id="inputUsername" placeholder="Username">
+                    <input type="text" name="uid" class="input" placeholder="Username">
                 </div>
                 <div class="login">
-                    <input type="password" name="pwd" class="input" id="inputPassword" placeholder="Password">
+                    <input type="password" name="pwd" class="input" placeholder="Password">
                 </div>
                 <div class="login"><button type="submit" name="submit" class="btn__section">LOGIN</button></div>
             </form>

@@ -2,7 +2,7 @@
     margin: 0 auto;
     padding: 0 auto;
     box-sizing: border-box;
-    color: #dedede;
+    color: rgb(28, 27, 27);
     font-family: 'Courier New', Courier, monospace;
     font-size: medium;
 }
@@ -14,6 +14,7 @@
 
 a {
     text-decoration: none;
+    color: #dedede;
 }
 
 li {
@@ -35,14 +36,14 @@ li {
     font-size: 25px;
     font-weight: 700;
 }
-
-.btn {
+.btn__login {
     margin: 25% auto;
     padding: 22%;
     background-color: cornflowerblue;
     cursor: pointer;
     border-radius: 5px;
     border: none;
+    color: #dedede;
 }
 
 .btn:hover,
@@ -65,10 +66,12 @@ li {
 .title {
     font-size: 55px;
     font-weight: 700;
+    color: #dedede;
 }
 
 .paragraph {
     padding: 2% 3%;
+    color: #dedede;
 }
 
 .section__container {
@@ -128,6 +131,9 @@ li {
     font-size: 20px;
     font-weight: 700;
 }
+.title_login {
+    color: #dedede;
+}
 
 .title_signup {
     color: rgb(28, 27, 27);
@@ -137,6 +143,7 @@ li {
 .small {
     margin: 3% auto;
     text-align: center;
+    color: #dedede;
 }
 
 .small__signup {
@@ -162,4 +169,5 @@ li {
     border-radius: 5px;
     margin-top: 5%;
     padding: 2% 5%;
+    color: #dedede;
 }
