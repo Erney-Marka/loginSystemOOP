@@ -1,98 +1,64 @@
 <?php
-session_start();
+require_once "header.php";
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
+<section class="background__picture">
+    <div class="section__container">
+        <div class="section__wrapper">
+            <img src="img/small.jpg" alt="" class="small__image">
+            <p class="line paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+        <div class="section__wrapper">
+            <h2 class="title">We make professional gear</h2>
+            <button class="btn__section">FIND OUR GEAR HERE</button>
+        </div>
+    </div>
+</section>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/main.css">
-    <title>Document</title>
-</head>
-
-<body>
-    <nav>
-        <div class="container">
-            <div class="wrapper__right">
-                <ul class="navbar">
-                    <li><a href="#" class="brand">LOGIN SYSTEM</a></li>
-                    <li><a href="#">HOME</a></li>
-                    <li><a href="#">PRODUCTS</a></li>
-                    <li><a href="#">CURRENT SALES</a></li>
-                    <li><a href="#">MEMBER+</a></li>
-                </ul>
+<section class="section__form">
+    <div class="form__signup line">
+        <form action="includes/signup.inc.php" method="post">
+            <div class="signup">
+                <label class="title_signup">SIGN UP</label>
+                <p class="small__signup">Don't hane an account yet? Sign up here!</p>
             </div>
-            <div class="wrapper__left">
-                <ul class="navbar">
-
-                    <?php if (isset($_SESSION['userid'])): ?>
-                    <li><a href="#"><?php echo $_SESSION['useruid']; ?></a></li>
-                    <li><a href="includes/logout.inc.php"><button type="submit" class="btn__login">LOGOUT</button></a></li>
-                    <?php else: ?>
-                    <li><a href="#">SIGN UP</a></li>
-                    <li><a href="#"><button type="submit" class="btn__login">LOGIN</button></li>
-                    <?php endif; ?>
-
-                </ul>
+            <div class="signup">
+                <input type="text" name="uid" class="input" placeholder="Username">
             </div>
-        </div>
-
-        </div>
-    </nav>
-
-    <section class="background__picture">
-        <div class="section__container">
-            <div class="section__wrapper">
-                <img src="img/small.jpg" alt="" class="small__image">
-                <p class="line paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <div class="signup">
+                <input type="password" name="pwd" class="input" placeholder="Password">
             </div>
-            <div class="section__wrapper">
-                <h2 class="title">We make professional gear</h2>
-                <button class="btn__section">FIND OUR GEAR HERE</button>
+            <div class="signup">
+                <input type="password" name="pwdRepeate" class="input" placeholder="Repeate Password">
             </div>
-        </div>
-    </section>
+            <div class="signup">
+                <input type="text" name="email" class="input" placeholder="E-mail">
+            </div>
+            <div class="signup"><button type="submit" name="submit" class="btn__section">SIGN UP</button></div>
+        </form>
+    </div>
+    <div class="form__login">
+        <form action="includes/login.inc.php" method="post">
+            <div class="login">
+                <label class="title_login">LOGIN</label>
+                <p class="small">Don't hane an account yet? Sign up here!</p>
+            </div>
+            <div class="login">
+                <input type="text" name="uid" class="input" placeholder="Username">
+            </div>
+            <div class="login">
+                <input type="password" name="pwd" class="input" placeholder="Password">
+            </div>
+            <div class="login"><button type="submit" name="submit" class="btn__section">LOGIN</button></div>
+        </form>
+    </div>
+</section>
 
-    <section class="section__form">
-        <div class="form__signup line">
-            <form action="includes/signup.inc.php" method="post">
-                <div class="signup">
-                    <label class="title_signup">SIGN UP</label>
-                    <p class="small__signup">Don't hane an account yet? Sign up here!</p>
-                </div>
-                <div class="signup">
-                    <input type="text" name="uid" class="input" placeholder="Username">
-                </div>
-                <div class="signup">
-                    <input type="password" name="pwd" class="input" placeholder="Password">
-                </div>
-                <div class="signup">
-                    <input type="password" name="pwdRepeate" class="input" placeholder="Repeate Password">
-                </div>
-                <div class="signup">
-                    <input type="text" name="email" class="input" placeholder="E-mail">
-                </div>
-                <div class="signup"><button type="submit" name="submit" class="btn__section">SIGN UP</button></div>
-            </form>
-        </div>
-        <div class="form__login">
-            <form action="includes/login.inc.php" method="post">
-                <div class="login">
-                    <label class="title_login">LOGIN</label>
-                    <p class="small">Don't hane an account yet? Sign up here!</p>
-                </div>
-                <div class="login">
-                    <input type="text" name="uid" class="input" placeholder="Username">
-                </div>
-                <div class="login">
-                    <input type="password" name="pwd" class="input" placeholder="Password">
-                </div>
-                <div class="login"><button type="submit" name="submit" class="btn__section">LOGIN</button></div>
-            </form>
-        </div>
-    </section>
+<section>
+    <div class="block">
+
+    </div>
+</section>
 
 </body>
 

@@ -36,6 +36,7 @@ li {
     font-size: 25px;
     font-weight: 700;
 }
+
 .btn__login {
     margin: 25% auto;
     padding: 22%;
@@ -97,7 +98,7 @@ li {
     display: flex;
     width: 60%;
     margin-top: 5%;
-    margin-bottom: 10%;
+    margin-bottom: 5%;
     justify-content: center;
 }
 
@@ -131,6 +132,7 @@ li {
     font-size: 20px;
     font-weight: 700;
 }
+
 .title_login {
     color: #dedede;
 }
@@ -170,4 +172,126 @@ li {
     margin-top: 5%;
     padding: 2% 5%;
     color: #dedede;
+}
+
+
+.block {
+    min-height: 500px;
+    background-color: rgb(20, 22, 32);
+}
+
+/* PROFILE PAGE */
+.profile__container {
+    padding: 10% auto;
+    width: 60%;
+}
+
+.profile__wrapper {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.left {
+    margin: 10% auto;
+    width: 20%;
+}
+
+.profile__img {
+    min-height: 300px;
+    min-width: 180px;
+    background-image: url(../img/profile-img.jpg);
+    background-size: cover;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    position: relative;
+}
+
+.profile__title {
+    padding: 10%;
+    text-shadow: 1px 1px 2px black;
+    font-weight: 800;
+}
+
+.profile__btn {
+    padding: 2% 3%;
+    background-color: #dedede;
+    color: rgb(28, 27, 27);
+    border-radius: 15px;
+    font-size: 14px;
+    font-weight: 800;
+
+    position: absolute;
+    left: 5%;
+    bottom: 5%;
+}
+.profile__btn:hover {
+    transition: 0.2s;
+    padding: 3% 3%;
+    background-color: #cecccc;
+}
+
+.profile__about {
+    min-width: 180px;
+    background-color: rgb(28, 27, 27);
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.profile__about>h3 {
+    padding: 10% 5%;
+    font-weight: 800;
+}
+
+.profile__about>p {
+    padding-left: 5%;
+    font-size: 15px;
+}
+
+
+.white__text {
+    color: #dedede;
+}
+
+.right {
+    width: 77%;
+    margin: 10% auto;
+}
+
+.profile__info {
+    background-color: rgb(28, 27, 27);
+    border-radius: 10px;
+    padding: 1%;
+}
+
+.info__title, .info_paragraph, .posts__title {
+    text-align: left;
+    margin: 1% auto 2% 3%;
+}
+.post__title, .post__text, .post__date {
+    text-align: left;
+    margin: 1% auto 2% 2%;
+}
+.post__date {
+    font-size: 12px;
+}
+
+.info__title {
+    font-size: 18px;
+    font-weight: 800;
+}
+
+
+.profile__posts {
+    background-color: #dedede;
+    border-radius: 10px;
+    padding: 1%;
+    margin-top: 1%;
+}
+.post__line {
+    border-left: 3px solid rgb(28, 27, 27);
+    margin-left: 1%;
+}
+.posts__title {
+    font-weight: 800;
 }

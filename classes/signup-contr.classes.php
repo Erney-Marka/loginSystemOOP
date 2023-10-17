@@ -1,21 +1,24 @@
 <?php
 // controller
 
-class SignupContr extends Signup {
+class SignupContr extends Signup
+{
 
     private $uid;
     private $pwd;
     private $pwdRepeate;
     private $email;
 
-    public function __construct($uid, $pwd, $pwdRepeate, $email) {
+    public function __construct($uid, $pwd, $pwdRepeate, $email)
+    {
         $this->uid = $uid;
         $this->pwd = $pwd;
         $this->pwdRepeate = $pwdRepeate;
         $this->email = $email;
     }
 
-    public function signupUser() {
+    public function signupUser()
+    {
 
         if ($this->emptyInput() == false) {
             // echo 'Empty Input!';
@@ -50,7 +53,9 @@ class SignupContr extends Signup {
         $this->setUser($this->uid, $this->pwd, $this->email);
     }
 
-    private function emptyInput() {
+    //error
+    private function emptyInput()
+    {
         $result = '';
 
         if (empty($this->uid) || empty($this->pwd) || empty($this->pwdRepeate) || empty($this->email)) {
@@ -62,7 +67,8 @@ class SignupContr extends Signup {
         return $result;
     }
 
-    private function invalidUid() {
+    private function invalidUid()
+    {
         $result = '';
 
         if (!preg_match("/^[a-zA-Z0-9]*$/", $this->uid)) {
@@ -74,7 +80,8 @@ class SignupContr extends Signup {
         return $result;
     }
 
-    private function invalidEmail() {
+    private function invalidEmail()
+    {
         $result = '';
 
         if (!filter_var($this->email, FILTER_VALIDATE_EMAIL)) {
@@ -86,7 +93,8 @@ class SignupContr extends Signup {
         return $result;
     }
 
-    private function pwdMatch() {
+    private function pwdMatch()
+    {
         $result = '';
 
         if ($this->pwd !== $this->pwdRepeate) {
@@ -98,7 +106,8 @@ class SignupContr extends Signup {
         return $result;
     }
 
-    private function uidTakenCheck() {
+    private function uidTakenCheck()
+    {
         $result = '';
 
         if (!$this->checkUser($this->uid, $this->email)) {
@@ -108,5 +117,11 @@ class SignupContr extends Signup {
         }
 
         return $result;
+    }
+
+    public function fetchUserId($uid) {
+        $userId = $this->getUserId($uid);
+
+        return $userId[0]['users_id'];
     }
 }

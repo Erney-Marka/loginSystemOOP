@@ -1,8 +1,10 @@
 <?php
 
-if (isset($_POST['submit'])) {
-    $uid = $_POST['uid'];
-    $pwd = $_POST['pwd'];
+//isset($_POST['submit'])
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    
+    $uid = htmlspecialchars($_POST['uid'], ENT_QUOTES, 'UTF-8');
+    $pwd = htmlspecialchars($_POST['pwd'], ENT_QUOTES, 'UTF-8');
 
     require_once "../classes/dbh.classes.php";
     require_once "../classes/login.classes.php";
