@@ -9,7 +9,7 @@
 
 .container,
 .form__login {
-    background-color: rgb(28, 27, 27);
+    background-color: rgb(14, 36, 85);
 }
 
 a {
@@ -40,28 +40,30 @@ li {
 .btn__login {
     margin: 25% auto;
     padding: 22%;
-    background-color: cornflowerblue;
+    background-color: rgb(218, 94, 63);
     cursor: pointer;
     border-radius: 5px;
     border: none;
     color: #dedede;
 }
 
-.btn:hover,
-.btn__section:hover {
-    background-color: rgb(79, 115, 182);
+.btn__section:hover,
+.btn__login:hover,
+.btn__settings:hover {
+    background-color: rgb(167, 32, 61);
     transition: 0.2s;
 }
 
 
 /*  */
 .background__picture {
-    background: linear-gradient(rgba(20, 22, 32, 0.9), rgba(20, 22, 32, 0.9)), url("../img/background-image.jpg") no-repeat center center;
+    background: linear-gradient(rgba(14, 36, 85, 0.9), rgba(46, 106, 158, 0.9)), url("../img/background-image.jpg") no-repeat center center;
     background-size: cover;
 }
 
 .small__image {
     height: 250px;
+    border-radius: 10px;
 }
 
 .title {
@@ -90,7 +92,7 @@ li {
 
 /* FORM */
 .line {
-    border-left: 4px solid cornflowerblue;
+    border-left: 4px solid rgb(14, 36, 85);
 }
 
 /* Основное расположение */
@@ -165,7 +167,7 @@ li {
 
 /* Кнопки */
 .btn__section {
-    background-color: cornflowerblue;
+    background-color: rgb(218, 94, 63);
     cursor: pointer;
     border: none;
     border-radius: 5px;
@@ -177,7 +179,7 @@ li {
 
 .block {
     min-height: 500px;
-    background-color: rgb(20, 22, 32);
+    background-color: rgb(46, 106, 158);
 }
 
 /* PROFILE PAGE */
@@ -188,7 +190,7 @@ li {
 
 .profile__wrapper {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     flex-wrap: wrap;
 }
 
@@ -225,6 +227,7 @@ li {
     left: 5%;
     bottom: 5%;
 }
+
 .profile__btn:hover {
     transition: 0.2s;
     padding: 3% 3%;
@@ -233,7 +236,7 @@ li {
 
 .profile__about {
     min-width: 180px;
-    background-color: rgb(28, 27, 27);
+    background-color: rgb(14, 36, 85);
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px;
 }
@@ -259,19 +262,25 @@ li {
 }
 
 .profile__info {
-    background-color: rgb(28, 27, 27);
+    background-color: rgb(14, 36, 85);
     border-radius: 10px;
     padding: 1%;
 }
 
-.info__title, .info_paragraph, .posts__title {
+.info__title,
+.info_paragraph,
+.posts__title {
     text-align: left;
     margin: 1% auto 2% 3%;
 }
-.post__title, .post__text, .post__date {
+
+.post__title,
+.post__text,
+.post__date {
     text-align: left;
     margin: 1% auto 2% 2%;
 }
+
 .post__date {
     font-size: 12px;
 }
@@ -288,10 +297,69 @@ li {
     padding: 1%;
     margin-top: 1%;
 }
+
 .post__line {
     border-left: 3px solid rgb(28, 27, 27);
     margin-left: 1%;
 }
+
 .posts__title {
     font-weight: 800;
+}
+
+/* PROFILE SETTINGS PAGE */
+.profilesettings__container {
+    height: 100%;
+    margin: 0 auto; 
+}
+
+.hull__block {
+    height: 50px;
+}
+.profilesettings__form {
+    max-width: 75%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(14, 36, 85);   
+    border-radius: 15px;
+}
+.form__settings {
+    margin-left: 4%;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.title__formsetting {
+    margin: 15% auto 0 0;
+    font-weight: 900;
+}
+.textarea__settings {
+    border-radius: 15px;
+    padding: 2% 1% 1% 1%;
+    width: 96%;
+    margin-left: 0;
+    font-size: 15px;
+}
+.input__settings {
+    border-radius: 15px;
+    padding: 2% 1% 2% 1%;
+    width: 96%;
+    margin-left: 0;
+    margin-bottom: 2%;
+    font-size: 15px;
+}
+
+.label__settings {
+    margin: 4% auto 2% 0;
+    padding-left: 0;
+}
+.btn__settings {
+    padding: 15% 35%;
+    margin-top: 55%;
+    margin-bottom: 55%;
+    border-radius: 20px;
+    border: none;
+    background-color: rgb(218, 94, 63);
+    cursor: pointer;
 }

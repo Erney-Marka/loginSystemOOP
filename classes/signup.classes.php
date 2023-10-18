@@ -42,7 +42,7 @@ class Signup extends Dbh {
 
     protected function getUserId($uid) {
 
-        $sql = "SELECT users_username FROM users WHERE users_id = ?;";
+        $sql = "SELECT users_id FROM users WHERE users_username = ?;";
         $stmt = $this->connect()->prepare($sql);
 
         if (!$stmt->execute(array($uid))) {

@@ -23,16 +23,16 @@ require_once "header.php";
                 <p class="small__signup">Don't hane an account yet? Sign up here!</p>
             </div>
             <div class="signup">
-                <input type="text" name="uid" class="input" placeholder="Username">
+                <input type="text" name="uid" class="input" placeholder="Username" id="username">
             </div>
             <div class="signup">
-                <input type="password" name="pwd" class="input" placeholder="Password">
+                <input type="password" name="pwd" class="input" placeholder="Password" id="password">
             </div>
             <div class="signup">
-                <input type="password" name="pwdRepeate" class="input" placeholder="Repeate Password">
+                <input type="password" name="pwdRepeate" class="input" placeholder="Repeate Password" id="passwordRepeate">
             </div>
             <div class="signup">
-                <input type="text" name="email" class="input" placeholder="E-mail">
+                <input type="text" name="email" class="input" placeholder="E-mail" id="email">
             </div>
             <div class="signup"><button type="submit" name="submit" class="btn__section">SIGN UP</button></div>
         </form>
@@ -44,10 +44,10 @@ require_once "header.php";
                 <p class="small">Don't hane an account yet? Sign up here!</p>
             </div>
             <div class="login">
-                <input type="text" name="uid" class="input" placeholder="Username">
+                <input type="text" name="uid" class="input" placeholder="Username" id="uid">
             </div>
             <div class="login">
-                <input type="password" name="pwd" class="input" placeholder="Password">
+                <input type="password" name="pwd" class="input" placeholder="Password" id="pwd">
             </div>
             <div class="login"><button type="submit" name="submit" class="btn__section">LOGIN</button></div>
         </form>
@@ -55,9 +55,7 @@ require_once "header.php";
 </section>
 
 <section>
-    <div class="block">
-
-    </div>
+    <div class="block"></div>
 </section>
 
 </body>

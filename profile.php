@@ -1,5 +1,10 @@
 <?php
 require_once "header.php";
+require_once "classes/dbh.classes.php";
+require_once "classes/profileinfo.classes.php";
+require_once "classes/profileinfo-view.classes.php";
+
+$profileInfo = new ProfileInfoView();
 ?>
 
 <section class="background__picture">
@@ -7,20 +12,36 @@ require_once "header.php";
         <div class="profile__wrapper">
             <div class="left">
                 <div class="profile__img">
-                    <h3 class="profile__title white__text">NAME PROFILE</h3>
-                    <a href="" class="profile__btn">PROFILE SETTINGS</a>
+                    <h3 class="profile__title white__text">
+                        <?php
+                        echo $_SESSION['useruid'];
+                        ?>
+                    </h3>
+                    <a href="profilesettings.php" class="profile__btn">PROFILE SETTINGS</a>
                 </div>
                 <div class="profile__about">
                     <h3 class="white__text">ABOUT</h3>
-                    <p class="white__text">Lorem ipsum dolor.</p>
+                    <p class="white__text">
+                        <?php
+                        $profileInfo->fetchAbout($_SESSION['userid']);
+                        ?>
+                    </p>
                     <h3 class="white__text"><a href="#">FOLLOWERS</a></h3>
                     <h3 class="white__text"><a href="#">FOLLOWING</a></h3>
                 </div>
             </div>
             <div class="right">
                 <div class="profile__info">
-                    <h3 class="info__title white__text">This is a Title.</h3>
-                    <p class="info_paragraph white__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam quod minima odit nulla, voluptatum maiores temporibus dolorum illum dolores dolore nobis quae corporis quo.</p>
+                    <h3 class="info__title white__text">
+                        <?php
+                        $profileInfo->fetchTitle($_SESSION['userid']);
+                        ?>
+                    </h3>
+                    <p class="info_paragraph white__text">
+                        <?php
+                        $profileInfo->fetchText($_SESSION['userid']);
+                        ?>
+                    </p>
                 </div>
                 <div class="profile__posts">
                     <h2 class="posts__title">POSTS</h2>
